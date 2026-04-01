@@ -6,7 +6,7 @@ import { eur, dec1 } from './assets/core/helpers.js';
 import { generatePremiumBacsPdf, generateCommercialProposalPdf } from './assets/services/pdf.js';
 import { submitLeadToFormspree } from './assets/services/crm.js';
 
-const FORMSPREE_URL = 'https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID';
+const FORMSPREE_URL = 'https://formspree.io/f/xzdkveny';
 const storage = createStorageService('ecoverta_bacs_v26_chat_premium');
 
 let project = storage.load() || createEmptyProject();
