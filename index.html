@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Starter BACS Chat Premium | EcoVertaConsul’t</title>
+  <meta name="description" content="Diagnostic BACS conversationnel premium : questions guidées, portefeuille multi-sites, scoring, PDF premium et proposition commerciale." />
+  <link rel="stylesheet" href="./assets/app.css" />
+</head>
+<body>
+  <div id="app" class="ev-app ev-chat-app">
+    <header class="ev-hero ev-hero--bacs">
+      <div class="ev-hero__inner">
+        <div class="ev-brand">
+          <div class="ev-brand__icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 35c-7 0-11-5-11-11 0-9 8-15 16-15 2-5 7-8 13-8 9 0 16 7 16 16 8 0 14 6 14 14s-6 14-14 14H22c-4 8-9 12-14 14 3-5 5-10 4-15h4Z" fill="#18b45b"/>
+              <ellipse cx="28" cy="27" rx="3.5" ry="6" fill="#fff"/>
+              <ellipse cx="40" cy="27" rx="3.5" ry="6" fill="#fff"/>
+              <ellipse cx="28" cy="28" rx="2" ry="3" fill="#0f2218"/>
+              <ellipse cx="40" cy="28" rx="2" ry="3" fill="#0f2218"/>
+              <path d="M27 39c3 2 7 2 10 0" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="ev-pill">Version chat premium</div>
+            <h1>Assistant BACS conversationnel</h1>
+            <p>Un diagnostic guidé, plus fluide, plus engageant et plus utile pour affiner la recommandation avant le PDF et la proposition commerciale.</p>
+          </div>
+        </div>
+        <div class="ev-hero__stats">
+          <div class="ev-stat"><strong>6 à 8</strong><span>questions utiles</span></div>
+          <div class="ev-stat"><strong>Adaptatif</strong><span>selon maturité</span></div>
+          <div class="ev-stat"><strong>PDF</strong><span>premium</span></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="ev-main">
+      <section class="ev-topbar">
+        <div>
+          <div id="wizardTitle" class="ev-topbar__title">Diagnostic conversationnel — Site actif</div>
+          <div id="wizardSubtitle" class="ev-topbar__subtitle">Répondez aux questions pour affiner automatiquement le diagnostic.</div>
+        </div>
+        <div class="ev-chip ev-chip--soft" id="chatProgressLabel">Question 1</div>
+      </section>
+
+      <section class="ev-progress">
+        <div class="ev-progress__bar"><div id="chatProgressFill" class="ev-progress__fill"></div></div>
+      </section>
+
+      <section class="ev-grid g-sidebar">
+        <aside>
+          <div class="ev-section-box">
+            <div class="ev-section-box__head">
+              <h4>Portefeuille</h4>
+              <button class="ev-btn ev-btn--ghost" id="addSiteBtn" type="button">+ Ajouter</button>
+            </div>
+            <div id="siteList" class="ev-list"></div>
+          </div>
+
+          <div class="ev-section-box">
+            <h4>Lecture rapide</h4>
+            <div class="ev-kpi-grid">
+              <div class="ev-kpi"><b>Sites</b><span id="sumSites">1</span></div>
+              <div class="ev-kpi"><b>Assujettis</b><span id="sumAssuj">0</span></div>
+              <div class="ev-kpi"><b>Capex TTC</b><span id="sumCapex">—</span></div>
+              <div class="ev-kpi ev-kpi--dark"><b>Priorité</b><span id="sumPriority">—</span></div>
+            </div>
+          </div>
+        </aside>
+
+        <section class="ev-stack">
+          <div class="ev-section-box ev-chat-shell">
+            <div class="ev-chat-head">
+              <div class="ev-chat-bot">
+                <div class="ev-brand__icon ev-brand__icon--sm" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 35c-7 0-11-5-11-11 0-9 8-15 16-15 2-5 7-8 13-8 9 0 16 7 16 16 8 0 14 6 14 14s-6 14-14 14H22c-4 8-9 12-14 14 3-5 5-10 4-15h4Z" fill="#18b45b"/>
+                    <ellipse cx="28" cy="27" rx="3.5" ry="6" fill="#fff"/>
+                    <ellipse cx="40" cy="27" rx="3.5" ry="6" fill="#fff"/>
+                    <ellipse cx="28" cy="28" rx="2" ry="3" fill="#0f2218"/>
+                    <ellipse cx="40" cy="28" rx="2" ry="3" fill="#0f2218"/>
+                    <path d="M27 39c3 2 7 2 10 0" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>Assistant EcoVerta</strong>
+                  <small id="siteActiveName">Site 1</small>
+                </div>
+              </div>
+              <div class="ev-chip ev-chip--soft" id="maturityChip">Maturité : à qualifier</div>
+            </div>
+
+            <div id="chatTranscript" class="ev-chat-transcript"></div>
+            <div id="chatComposer" class="ev-chat-composer"></div>
+          </div>
+
+          <div class="ev-section-box">
+            <h4>Décision automatique</h4>
+            <div id="verdictBox" class="verdict-box neutral">
+              <div id="verdictTag" class="verdict-badge">À affiner</div>
+              <h3 id="verdictTitle">Diagnostic en cours</h3>
+              <p id="verdictText">Répondez aux questions pour obtenir un verdict automatique, un score et une recommandation claire.</p>
+            </div>
+          </div>
+
+          <div class="scorebox">
+            <div class="ring" id="scoreRing"><div class="ring__core"><strong id="scoreValue">0</strong><span>Priorité</span></div></div>
+            <div class="scorebox__text">
+              <h4 id="scoreTitle">Lecture portefeuille</h4>
+              <p id="scoreText">Le score de priorité se met à jour au fil des réponses.</p>
+              <div class="level" id="effortLevel">Effort : —</div>
+            </div>
+          </div>
+
+          <div class="ev-section-box">
+            <h4>Lecture décisionnelle</h4>
+            <div class="ev-kpi-grid">
+              <div class="ev-kpi"><b>CAPEX</b><span id="decCapex">—</span></div>
+              <div class="ev-kpi"><b>ROI</b><span id="decRoi">—</span></div>
+              <div class="ev-kpi"><b>Statut réglementaire</b><span id="decReg">—</span></div>
+              <div class="ev-kpi ev-kpi--dark"><b>Verdict</b><span id="decPriority">—</span></div>
+            </div>
+          </div>
+
+          <div class="ev-section-box">
+            <h4>Résultats portefeuille</h4>
+            <div id="topActions" class="ev-list ev-list--soft"></div>
+          </div>
+
+          <div class="ev-grid g2">
+            <div class="ev-section-box">
+              <h4>Classement portefeuille</h4>
+              <div id="rankingList" class="ev-list"></div>
+            </div>
+            <div class="ev-section-box">
+              <h4>Plan d’investissement recommandé</h4>
+              <div id="phasingBox"></div>
+            </div>
+          </div>
+
+          <div class="ev-grid g2">
+            <div class="ev-section-box ev-section-box--dark">
+              <h4>Déblocage PDF</h4>
+              <div class="ev-grid g2">
+                <div class="ev-field"><label>Prénom</label><input class="ev-input" id="leadFirstName"></div>
+                <div class="ev-field"><label>Nom</label><input class="ev-input" id="leadLastName"></div>
+                <div class="ev-field"><label>Société</label><input class="ev-input" id="leadCompany"></div>
+                <div class="ev-field"><label>Email pro</label><input class="ev-input" id="leadEmail"></div>
+                <div class="ev-field"><label>Téléphone</label><input class="ev-input" id="leadPhone"></div>
+                <div class="ev-field"><label>Message</label><input class="ev-input" id="leadMessage"></div>
+              </div>
+              <label class="ev-check"><input type="checkbox" id="leadConsent"><span>Je consens au traitement de mes données pour être recontacté.</span></label>
+              <div class="ev-btn-row">
+                <button class="ev-btn ev-btn--primary" id="downloadPdfBtn" type="button">Télécharger le PDF premium</button>
+                <button class="ev-btn ev-btn--ghost" id="sendLeadBtn" type="button">Envoyer la demande</button>
+              </div>
+            </div>
+            <div class="ev-section-box">
+              <h4>Proposition commerciale</h4>
+              <div class="ev-grid g2">
+                <div class="ev-field"><label>Client</label><input class="ev-input" id="proposalClient"></div>
+                <div class="ev-field"><label>Référence mission</label><input class="ev-input" id="proposalRef"></div>
+                <div class="ev-field"><label>Honoraires HT</label><input class="ev-input" id="proposalFee" type="number" value="0"></div>
+                <div class="ev-field"><label>Délai mission</label><input class="ev-input" id="proposalDelay" value="À confirmer"></div>
+              </div>
+              <div class="ev-btn-row">
+                <button class="ev-btn ev-btn--dark" id="downloadProposalBtn" type="button">Générer la proposition commerciale</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+  <script type="module" src="./assets/app.js"></script>
+</body>
+</html>
