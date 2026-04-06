@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pré-diagnostic Décret BACS — note de cadrage initiale | EcoVertaConsul't</title>
+  <meta name="description" content="Évaluez votre situation au regard du Décret BACS, identifiez les priorités d’action et obtenez une première lecture de l’effort de mise en conformité." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta name="author" content="EcoVertaConsul't" />
+  <meta name="theme-color" content="#18b45b" />
+  <meta name="format-detection" content="telephone=no" />
+  <link id="canonicalLink" rel="canonical" href="https://www.ecovertaconsult.com/pre-diagnostic-decret-bacs/" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="EcoVertaConsul't" />
+  <meta property="og:title" content="Pré-diagnostic Décret BACS — note de cadrage initiale" />
+  <meta property="og:description" content="Évaluez votre situation au regard du Décret BACS, identifiez les priorités d’action et obtenez une première lecture de l’effort de mise en conformité." />
+  <meta property="og:url" id="ogUrlMeta" content="https://www.ecovertaconsult.com/pre-diagnostic-decret-bacs/" />
+  <meta property="og:image" id="ogImageMeta" content="https://www.ecovertaconsult.com/pre-diagnostic-decret-bacs/assets/img/site-illustration.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pré-diagnostic Décret BACS — note de cadrage initiale" />
+  <meta name="twitter:description" content="Évaluez votre situation au regard du Décret BACS, identifiez les priorités d’action et obtenez une première lecture de l’effort de mise en conformité." />
+  <meta name="twitter:image" id="twitterImageMeta" content="https://www.ecovertaconsult.com/pre-diagnostic-decret-bacs/assets/img/site-illustration.png" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="manifest" href="./site.webmanifest" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/img/icon-192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="./assets/img/icon-512.png" />
+  <link rel="stylesheet" href="./assets/app.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/jspdf-autotable@3.8.2/dist/jspdf.plugin.autotable.min.js"></script>
+  <script type="application/ld+json" id="ldJsonApp">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Pré-diagnostic Décret BACS",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "inLanguage": "fr",
+    "description": "Pré-diagnostic pour structurer une première lecture de portefeuille ou de site au regard du Décret BACS : périmètre d’assujettissement, niveau d’équipement, leviers de mise en conformité, ordre de grandeur économique et prochaines étapes de cadrage.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "EcoVertaConsul't"
+    },
+    "url": "https://www.ecovertaconsult.com/pre-diagnostic-decret-bacs/"
+  }
+  </script>
+  <script type="application/ld+json" id="ldJsonFaq">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "À qui s’adresse ce pré-diagnostic ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ce pré-diagnostic s’adresse principalement aux acteurs du tertiaire souhaitant structurer une première analyse de leur situation au regard du Décret BACS, à l’échelle d’un site ou d’un portefeuille."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Que signifient les seuils de puissance affichés ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Les seuils de puissance servent à apprécier le périmètre potentiel d’assujettissement des installations de chauffage, climatisation ou ventilation concernées par le Décret BACS."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Les montants et temps de retour affichés sont-ils contractuels ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non. Les résultats fournis constituent des ordres de grandeur indicatifs destinés à orienter la réflexion. Ils doivent être confirmés par une analyse plus détaillée."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cet outil permet-il de confirmer à lui seul la conformité au Décret BACS ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non. Cet outil fournit une première lecture d’opportunité et de priorités. La confirmation d’une situation réglementaire suppose une vérification plus détaillée des installations, du périmètre concerné et des données techniques disponibles."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pourquoi le niveau de fiabilité peut-il être limité ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Le niveau de fiabilité dépend de la qualité et du niveau de détail des données saisies. Plus les informations sont précises, plus la lecture produite est exploitable."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Que faire après le pré-diagnostic ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "L’étape suivante la plus utile consiste généralement à organiser un échange de cadrage afin de confirmer le périmètre, préciser les hypothèses et hiérarchiser les actions à engager."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <div class="wrap">
+      <section class="hero section">
+        <div class="hero-copy">
+          <div class="hero-badge">EcoVertaConsul't · Décret BACS</div>
+          <h1>
+            <span class="hero-line hero-line-1">Pré-diagnostic</span>
+            <span class="hero-line hero-line-2">Décret BACS</span>
+          </h1>
+          <div class="hero-subtitle">Première lecture de situation, de priorités d’action et d’effort de mise en conformité.</div>
+          <p class="hero-text">
+            Évaluez votre portefeuille ou votre site au regard du Décret BACS, identifiez les priorités d’intervention et préparez une note de cadrage partageable.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-dark" id="scrollToWizard">Démarrer le pré-diagnostic</button>
+            <button class="btn btn-outline" id="loadDemo">Charger un exemple</button>
+            <a class="btn btn-link-hero" id="heroCalendlyBtn" href="https://calendly.com/ecoverta/30min" target="_blank" rel="noopener noreferrer">Planifier un échange de cadrage</a>
+          </div>
+          <p class="hero-note">Portefeuille tertiaire · Note de cadrage PDF · Sauvegarde locale · FAQ</p>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <span class="badge-new">Décret BACS</span>
+          <div class="visual-inner">
+            <p class="visual-title">Cadrez, priorisez, arbitrez</p>
+            <p class="visual-sub">Une structure claire pour transformer une première lecture en note de cadrage partageable.</p>
+            <div class="visual-stats">
+              <div class="vstat"><strong>5</strong><span>étapes</span></div>
+              <div class="vstat"><strong>PDF</strong><span>de cadrage</span></div>
+              <div class="vstat"><strong>Priorité</strong><span>portefeuille</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hub section">
+        <div class="hub-inner">
+          <h2>Transformez un pré-diagnostic en note de cadrage Décret BACS partageable.</h2>
+          <div class="hub-actions">
+            <button class="btn btn-green" id="hubStart">Démarrer le pré-diagnostic</button>
+            <a class="btn btn-light" id="hubCalendlyBtn" href="https://calendly.com/ecoverta/30min" target="_blank" rel="noopener noreferrer">Planifier un échange de cadrage</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="pattern-bar section" aria-hidden="true"></div>
+
+      <section class="wizard" id="wizardSection">
+        <div class="wizard-top">
+          <div class="wizard-top-head">
+            <div>
+              <div class="wizard-title" id="wizardTitle">Étape 1 sur 5 — Cadre portefeuille</div>
+              <div class="wizard-sub" id="wizardSub">Renseignez le contexte du portefeuille, le type d’actifs concernés et le niveau de priorité donné au sujet BACS.</div>
+            </div>
+            <div class="remain" id="wizardRemain">4 étapes restantes</div>
+          </div>
+          <div class="progress"><div class="progress-fill" id="progressFill"></div></div>
+          <div class="steps" id="wizardSteps">
+            <div class="step active" data-step="0"><div class="step-n">1</div><div><b>Cadre portefeuille</b><span>Contexte et priorité</span></div></div>
+            <div class="step" data-step="1"><div class="step-n">2</div><div><b>Données site</b><span>Caractéristiques et première lecture</span></div></div>
+            <div class="step" data-step="2"><div class="step-n">3</div><div><b>Leviers BACS</b><span>Mesures et scénarios</span></div></div>
+            <div class="step" data-step="3"><div class="step-n">4</div><div><b>Synthèse portefeuille</b><span>Priorités et ordres de grandeur</span></div></div>
+            <div class="step" data-step="4"><div class="step-n">5</div><div><b>Export & suite</b><span>Note PDF et prochaine étape</span></div></div>
+          </div>
+        </div>
+
+        <div class="wizard-body">
+          <section class="panel active" data-panel="0">
+            <div class="panel-head">
+              <div><div class="eyebrow">Étape 1</div><h3 class="panel-title">Cadre portefeuille</h3></div>
+              <span class="pill green">Obligatoire</span>
+            </div>
+            <div class="grid g2">
+              <div class="field"><label for="portfolioName">Nom du portefeuille</label><input id="portfolioName" type="text" placeholder="Ex. Patrimoine tertiaire 2030" /></div>
+              <div class="field"><label for="customerType">Type d’organisation</label><select id="customerType"><option value="tertiaire">Tertiaire privé</option><option value="public">Secteur public</option><option value="mixte">Mixte</option></select></div>
+              <div class="field"><label for="targetYear">Horizon cible</label><select id="targetYear"><option value="2030">2030</option><option value="2040">2040</option><option value="2050">2050</option></select></div>
+              <div class="field"><label for="objective">Objectif principal du cadrage</label><select id="objective"><option value="economies">Réduction des consommations</option><option value="conformite">Conformité Décret BACS</option><option value="decarbonation">Décarbonation</option><option value="strategie">Priorisation portefeuille</option></select></div>
+            </div>
+            <div class="cards">
+              <div class="mini-card"><b>Sites</b><span id="summarySites">0</span></div>
+              <div class="mini-card"><b>Surface totale</b><span id="summarySurface">0 m²</span></div>
+              <div class="mini-card"><b>Lecture de cadrage</b><span id="summaryPotential">À construire</span></div>
+            </div>
+          </section>
+
+          <section class="panel" data-panel="1">
+            <div class="panel-head">
+              <div><div class="eyebrow">Étape 2</div><h3 class="panel-title">Caractéristiques du site</h3></div>
+              <span class="pill">Multi-sites</span>
+            </div>
+            <div class="grid g3">
+              <div class="field"><label for="siteName">Nom du site</label><input id="siteName" type="text" placeholder="Ex. Site A" /></div>
+              <div class="field"><label for="segment">Segment</label><select id="segment"><option value="tertiaire">Tertiaire privé</option><option value="public">Secteur public</option></select></div>
+              <div class="field"><label for="usage">Usage</label><select id="usage"><option value="bureaux">Bureaux</option><option value="enseignement">Enseignement</option><option value="sante">Santé</option><option value="commerce">Commerce</option><option value="hotel">Hôtellerie</option><option value="mixte">Mixte</option></select></div>
+              <div class="field"><label for="surface">Surface (m²)</label><input id="surface" type="number" min="1" step="1" value="2400" /></div>
+              <div class="field"><label for="act">Conso actuelle (kWh)</label><input id="act" type="number" min="0" step="1" value="420000" /></div>
+              <div class="field"><label for="target">Conso cible (kWh)</label><input id="target" type="number" min="0" step="1" value="290000" /></div>
+              <div class="field"><label for="price">Prix moyen (€/kWh)</label><input id="price" type="number" min="0" step="0.001" value="0.18" /></div>
+              <div class="field"><label for="co2">Facteur CO₂ (kg/kWh)</label><input id="co2" type="number" min="0" step="0.001" value="0.204" /></div>
+              <div class="field"><label for="gtb">GTB / pilotage</label><select id="gtb"><option value="non">Non</option><option value="partielle">Partielle</option><option value="complete">Complète</option></select></div>
+              <div class="field"><label for="dataQuality">Qualité de données</label><select id="dataQuality"><option value="faible">Faible</option><option value="moyenne" selected>Moyenne</option><option value="bonne">Bonne</option></select></div>
+              <div class="field"><label for="projectIntent">Intention projet</label><select id="projectIntent"><option value="aucune">Pas de projet défini</option><option value="travaux_12m">Travaux &lt; 12 mois</option><option value="travaux_24m">Travaux &lt; 24 mois</option><option value="audit">Audit / étude</option></select></div>
+              <div class="field"><label for="aidesPct">Aides / subventions (%)</label><input id="aidesPct" type="number" min="0" max="60" step="1" value="20" /></div>
+            </div>
+            <div class="actions-row">
+              <button class="btn btn-dark btn-sm" id="computeSiteBtn">Mettre à jour la lecture du site</button>
+              <button class="btn btn-green btn-sm" id="addSiteBtn">Ajouter ce site au portefeuille</button>
+            </div>
+            <div class="subsection">
+              <div class="subsection-head"><h4>Sites intégrés à l’analyse</h4><span class="pill blue" id="siteCountPill">0 site</span></div>
+              <div id="portfolioSitesList" class="site-list"></div>
+            </div>
+          </section>
+
+          <section class="panel" data-panel="2">
+            <div class="panel-head">
+              <div><div class="eyebrow">Étape 3</div><h3 class="panel-title">Leviers de mise en conformité et de performance</h3></div>
+              <span class="pill orange">Cadre d’analyse</span>
+            </div>
+            <div class="hint-block">Sélectionnez les leviers à intégrer dans la simulation. Ils influencent l’ordre de grandeur économique, la lecture du potentiel de mise en conformité et la priorisation des actions.</div>
+            <div id="catalogGrid" class="catalog-grid"></div>
+            <p class="hint-block" id="measureFallbackHint">Aucun levier n’a été sélectionné. Un socle BACS standard est appliqué par défaut pour la simulation.</p>
+            <div class="cards mt16">
+              <div class="mini-card"><b>Leviers retenus</b><span id="activeMeasuresCount">0</span></div>
+              <div class="mini-card"><b>Actions immédiates</b><span id="quickWinCount">0</span></div>
+              <div class="mini-card"><b>Actions structurantes</b><span id="structuringCount">0</span></div>
+            </div>
+          </section>
+
+          <section class="panel" data-panel="3">
+            <div class="panel-head">
+              <div><div class="eyebrow">Étape 4</div><h3 class="panel-title">Synthèse portefeuille Décret BACS</h3></div>
+              <span class="pill green" id="portfolioStatusPill">Synthèse</span>
+            </div>
+            <div class="result-hero">
+              <h3 id="portfolioHeadline">Votre portefeuille BACS présente un potentiel à qualifier.</h3>
+              <p id="portfolioLead">Ajoutez des sites et calculez pour afficher une première lecture d’opportunité, d’effort estimé et de priorités d’intervention.</p>
+            </div>
+            <div class="result-grid">
+              <div class="box box-score">
+                <h4>Priorité d’intervention</h4>
+                <div class="score-ring" id="scoreRing"><div><strong id="portfolioScore">0</strong><span>/100</span></div></div>
+                <p id="scoreComment" class="muted-center">Ce score synthétique combine le niveau d’équipement, l’effort estimé de mise à niveau et le contexte du portefeuille.</p>
+              </div>
+              <div class="box">
+                <h4>Ordres de grandeur économiques</h4>
+                <div class="kpi-list">
+                  <div class="kpi-row"><span>Sites</span><strong id="kpiSites">0</strong></div>
+                  <div class="kpi-row"><span>Surface totale</span><strong id="kpiSurface">0 m²</strong></div>
+                  <div class="kpi-row"><span>CAPEX net</span><strong id="kpiCapex">—</strong></div>
+                  <div class="kpi-row"><span>Économies annuelles</span><strong id="kpiSavings">—</strong></div>
+                  <div class="kpi-row"><span>ROI portefeuille</span><strong id="kpiRoi">—</strong></div>
+                  <div class="kpi-row"><span>CO₂ évité / an</span><strong id="kpiCo2">—</strong></div>
+                </div>
+              </div>
+            </div>
+            <div class="result-grid mt16">
+              <div class="box">
+                <h4>Classement des sites</h4>
+                <div id="rankingList" class="site-list"></div>
+              </div>
+              <div class="box">
+                <h4>Top 3 actions portefeuille</h4>
+                <div id="topActionsList" class="action-list"></div>
+              </div>
+            </div>
+            <div class="box mt16">
+              <h4>Points de vigilance et lecture de cadrage</h4>
+              <div id="salesReadout" class="action-list"></div>
+            </div>
+          </section>
+
+          <section class="panel" data-panel="4">
+            <div class="panel-head">
+              <div><div class="eyebrow">Étape 5</div><h3 class="panel-title">Export & suite</h3></div>
+              <span class="pill green">Note PDF BACS</span>
+            </div>
+            <div class="result-grid">
+              <div class="box">
+                <h4>Exporter la note de cadrage</h4>
+                <p class="box-text">Téléchargez une synthèse exploitable du pré-diagnostic et préparez la suite de votre démarche.</p>
+                <div class="actions-row mt16">
+                  <button class="btn btn-dark btn-sm" id="exportPdfBtn">Télécharger la note de cadrage PDF</button>
+                  <button class="btn btn-light btn-sm" id="saveLocalBtn">Sauvegarder localement</button>
+                  <button class="btn btn-light btn-sm" id="restoreLocalBtn">Restaurer</button>
+                </div>
+                <div class="actions-row mt16">
+                  <a class="btn btn-green btn-sm" id="calendlyBtn" href="https://calendly.com/ecoverta/30min" target="_blank" rel="noopener noreferrer">Planifier un échange de cadrage</a>
+                </div>
+                <p class="box-text mt16">30 min pour qualifier votre feuille de route BACS.</p>
+                <p class="box-text mt16"><strong>Cadre Décret BACS :</strong> ce pré-diagnostic aide à prioriser des actions de pilotage. Il ne statue pas à lui seul sur l’assujettissement réglementaire, qui doit être confirmé avec les systèmes concernés et leur puissance nominale utile.</p>
+              </div>
+              <div class="box">
+                <h4>Recevoir la synthèse et échanger sur la suite</h4>
+                <div class="grid g2">
+                  <div class="field"><label for="contactName">Nom / Société</label><input id="contactName" type="text" placeholder="EcoVerta / Client" /></div>
+                  <div class="field"><label for="contactEmail">Email professionnel</label><input id="contactEmail" type="email" placeholder="contact@entreprise.fr" /></div>
+                  <div class="field"><label for="contactPhone">Téléphone</label><input id="contactPhone" type="tel" placeholder="06 00 00 00 00" /></div>
+                  <div class="field"><label for="contactCompany">Organisation</label><input id="contactCompany" type="text" placeholder="Nom de la structure" /></div>
+                  <div class="field field-full"><label for="contactMessage">Message</label><textarea id="contactMessage" rows="5" placeholder="Contexte, urgence, volume de patrimoine, attentes…"></textarea></div>
+                </div>
+                <label class="checkline mt16"><input id="consent" type="checkbox" /> <span>J’accepte l’utilisation de mes données pour traiter ma demande de cadrage Décret BACS.</span></label>
+                <div class="actions-row mt16">
+                  <button class="btn btn-green btn-sm" id="sendLeadBtn">Envoyer ma demande</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="wizard-foot">
+          <button class="btn btn-light" id="prevBtn">← Précédent</button>
+          <div class="wizard-foot-right">
+            <button class="btn btn-light" id="resetBtn">Réinitialiser</button>
+            <button class="btn btn-green" id="nextBtn">Continuer →</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq section" aria-labelledby="faqTitle">
+        <div class="faq-head">
+          <div>
+            <div class="eyebrow">FAQ</div>
+            <h2 id="faqTitle">Questions fréquentes</h2>
+          </div>
+          <p>FAQ de cadrage pour préparer un échange, une étude ou une revue de portefeuille avant arbitrage.</p>
+        </div>
+        <div class="faq-grid">
+          <details class="faq-item" open>
+            <summary>Cet outil permet-il de confirmer à lui seul la conformité au Décret BACS&nbsp;?</summary>
+            <p>Non. Cet outil fournit une première lecture d’opportunité et de priorités. La confirmation d’une situation réglementaire suppose une vérification plus détaillée des installations, du périmètre concerné et des données techniques disponibles.</p>
+          </details>
+          <details class="faq-item">
+            <summary>À qui s’adresse ce pré-diagnostic&nbsp;?</summary>
+            <p>Ce pré-diagnostic s’adresse principalement aux acteurs du tertiaire souhaitant structurer une première analyse de leur situation au regard du Décret BACS, à l’échelle d’un site ou d’un portefeuille.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Que signifient les seuils de puissance affichés&nbsp;?</summary>
+            <p>Les seuils de puissance servent à apprécier le périmètre potentiel d’assujettissement des installations de chauffage, climatisation ou ventilation concernées par le Décret BACS.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Les montants et temps de retour affichés sont-ils contractuels&nbsp;?</summary>
+            <p>Non. Les résultats fournis constituent des ordres de grandeur indicatifs destinés à orienter la réflexion. Ils doivent être confirmés par une analyse plus détaillée.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Pourquoi le niveau de fiabilité peut-il être limité&nbsp;?</summary>
+            <p>Le niveau de fiabilité dépend de la qualité et du niveau de détail des données saisies. Plus les informations sont précises, plus la lecture produite est exploitable.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Que faire après le pré-diagnostic&nbsp;?</summary>
+            <p>L’étape suivante la plus utile consiste généralement à organiser un échange de cadrage afin de confirmer le périmètre, préciser les hypothèses et hiérarchiser les actions à engager.</p>
+          </details>
+        </div>
+      </section>
+
+    </div>
+  </div>
+  <div id="toast" class="toast"></div>
+  <noscript><div style="max-width:960px;margin:16px auto;padding:12px 16px;border:1px solid #d9e8df;border-radius:12px;background:#fff;">Ce pré-diagnostic Décret BACS nécessite JavaScript pour fonctionner.</div></noscript>
+  <script>
+    (function(){
+      var currentUrl = window.location.origin + window.location.pathname;
+      var canonical = document.getElementById('canonicalLink');
+      var ogUrl = document.getElementById('ogUrlMeta');
+      var ogImage = document.getElementById('ogImageMeta');
+      var twImage = document.getElementById('twitterImageMeta');
+      var imageUrl = window.location.origin + window.location.pathname.replace(/[^/]*$/, '') + 'assets/img/site-illustration.png';
+      if (canonical) canonical.href = currentUrl;
+      if (ogUrl) ogUrl.content = currentUrl;
+      if (ogImage) ogImage.content = imageUrl;
+      if (twImage) twImage.content = imageUrl;
+      var ld = document.getElementById('ldJsonApp');
+      if (ld) {
+        try {
+          var json = JSON.parse(ld.textContent);
+          json.url = currentUrl;
+          ld.textContent = JSON.stringify(json);
+        } catch (e) {}
+      }
+    })();
+  </script>
+  <script src="./assets/app-bundle.js"></script>
+</body>
+</html>
